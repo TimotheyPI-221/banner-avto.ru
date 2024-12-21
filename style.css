@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "YS Geo";
+  src: url("https://yastatic.net/s3/home/fonts/ys/4/text-geo-regular.woff")
+      format("woff"),
+    url("https://yastatic.net/s3/home/fonts/ys/4/text-geo-regular.woff2")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "YS Geo";
+  src: url("https://yastatic.net/s3/home/fonts/ys/4/text-geo-medium.woff")
+      format("woff"),
+    url("https://yastatic.net/s3/home/fonts/ys/4/text-geo-medium.woff2")
+      format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "YS Geo", Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #e8dfe0;
+}
+
+.container {
+  position: relative;
+  min-width: 888px;
+  height: 520px;
+  margin: 0 auto;
+  /* background-image: url("./img/back.png");
+  background-size: auto 520px;
+  background-repeat: no-repeat;
+  background-position: right center; */
+  z-index: 10;
+}
+
+.background {
+  background: linear-gradient(
+    90deg,
+    #e8dfe0 44.65%,
+    rgba(222, 213, 214, 0) 80%
+  );
+  max-width: 63%;
+  height: 520px;
+  z-index: 1;
+}
+
+.background-2 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 45px;
+  height: 520px;
+  z-index: 1;
+}
+
+.logo {
+  width: 343px;
+  height: 27px;
+  margin-bottom: 60px;
+  background-image: url("img/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.text {
+  max-width: 80%;
+  margin-bottom: 58px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.019em;
+}
+
+.avto-img {
+  position: absolute;
+  top: 48px;
+  right: 45px;
+  width: 244px;
+  height: 52px;
+}
+
+.btn-img {
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  border-radius: 15px;
+  padding: 22px;
+  width: 308px;
+  height: 63px;
+  font-size: 24px;
+  font-weight: 500;
+  background: #fff;
+  letter-spacing: 0.03em;
+}
+
+.car{
+  position: absolute;
+  top: 0;
+  right: -160px;
+  min-width: 878px;
+  height: 520px;
+  background-image: url("img/back.png");
+  background-size: auto 520px;
+  background-repeat: no-repeat;
+  background-position: right 160px center;
+  z-index: 0;
+}
+
+.car::before,
+.car::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 312px; 
+  z-index: 1;
+}
+
+.car::before{
+  background: linear-gradient(
+    to right, 
+    #e8dfe0 35%, /* Полностью непрозрачный центр */
+    rgba(0, 0, 0, 0) 100%  /* Плавный переход к непрозрачности справа */
+  );
+}
+
+@media (min-width: 940px) {
+  .background {
+    background: linear-gradient(
+      90deg,
+      #e8dfe0 53.65%,
+      rgba(222, 213, 214, 0) 80%
+    );
+    max-width: 63%;
+    height: 520px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1390px) {
+  .background {
+    background: none;
+    }
+  .car::before{
+    background: linear-gradient(
+      to right, 
+      #e8dfe0 30%, /* Полностью непрозрачный центр */
+      rgba(0, 0, 0, 0) 100%  /* Плавный переход к непрозрачности справа */
+      );
+    }
+    .car::before,
+    .car::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 220px; 
+      z-index: 1;
+    }
+  .car{
+    right: 0;
+    background-image: url("img/back-1.png");
+    background-position: right -660px center;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .text {
+    margin-bottom: 56px;
+    font-size: 30px;
+  }
+  .background-2{
+    padding: 57px ;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+ } 
+
+ @media (min-width: 1800px) {
+  .background-2{
+    padding: 57px 200px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .background {
+    max-width: 100%;
+    /* background: linear-gradient(
+    90deg,
+    #e8dfe0 48.65%,
+    rgba(222, 213, 214, 0) 70%
+  ); */
+  }
+
+  .logo {
+    width: 550px;
+    height: 41px;
+  }
+  h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  .btn{
+    border-radius: 24px;
+    padding: 35px;
+    width: 499px;
+    height: 102px;;
+    font-size: 40px;
+    margin-right: 50px;
+  }
+  .btn-img {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .avto-img {
+    position: static;
+    width: 358px;
+    height: 76px;
+  }
+
+}
+
+@media (min-width: 2300px) {
+  .car{
+    min-width: 1400px;
+    background-position: right -300px center;
+  }
+  .car::before{
+    background: linear-gradient(
+      to right, 
+      #e8dfe0 60%, /* Полностью непрозрачный центр */
+      rgba(0, 0, 0, 0) 100%  /* Плавный переход к непрозрачности справа */
+    );
+  }
+  .car::after {
+    right: 0;
+    background: linear-gradient(to left, #e8dfe0, rgba(255, 255, 255, 0));
+  }
+  h1 {
+    font-size: 70px;
+  }
+  .text {
+    font-size: 40px;
+    letter-spacing: 0.0em;
+  }
+  /* .background {
+    max-width: 80%;
+    background: linear-gradient(
+    90deg,
+    #e8dfe0 72.65%,
+    rgba(222, 213, 214, 0) 80%
+  );
+  } */
+  .car::before {
+    width: 300px; 
+  }
+} 
+
+@media (min-width: 2700px) {
+  /* .background {
+    max-width: 100%;
+    background: linear-gradient(
+    90deg,
+    #e8dfe0 40.65%,
+    rgba(222, 213, 214, 0) 56%
+  );
+  } */
+ 
+  .car::before{
+    width: 200px; 
+    background: linear-gradient(
+      to right, 
+      #e8dfe0 15%, /* Полностью непрозрачный центр */
+      rgba(0, 0, 0, 0) 100%  /* Плавный переход к непрозрачности справа */
+    );
+  }
+  .background-2{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0, 0) 77%, rgba(0, 0, 0, 0.6) 100%);
+  }
+  .car{
+    right: 159px;
+    min-width: 1550px;
+    background-position: right 0px center;
+  }
+}
